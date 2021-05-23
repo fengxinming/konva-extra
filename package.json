@@ -1,0 +1,64 @@
+{
+  "name": "konva-extra",
+  "version": "1.0.0",
+  "description": "Some extra shapes for Konva framework.",
+  "main": "index.js",
+  "module": "./es/index.js",
+  "jsnext:main": "./es/index.js",
+  "unpkg": "umd.js",
+  "jsdelivr": "umd.js",
+  "scripts": {
+    "build": "rollup -c",
+    "release": "npm run build && npm publish dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengxinming/konva-extra.git"
+  },
+  "keywords": [
+    "konva",
+    "extra"
+  ],
+  "author": "Jesse Feng <fxm0016@126.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fengxinming/konva-extra/issues"
+  },
+  "homepage": "https://github.com/fengxinming/konva-extra#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/eslint-parser": "^7.13.14",
+    "@babel/eslint-plugin": "^7.13.16",
+    "@babel/preset-env": "^7.14.0",
+    "@commitlint/cli": "^12.1.1",
+    "@rollup/plugin-alias": "^3.1.2",
+    "@rollup/plugin-buble": "^0.21.3",
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
+    "@rollup/plugin-replace": "^2.4.2",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.25.0",
+    "eslint-config-fe": "^1.3.1",
+    "husky": "^4.3.8",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.4",
+    "rollup": "^2.46.0",
+    "rollup-plugin-combine": "^2.1.1",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-empty": "^1.0.0",
+    "rollup-plugin-match": "^1.0.0",
+    "rollup-plugin-replace-imports": "^1.0.0",
+    "rollup-plugin-terser": "^5.3.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}

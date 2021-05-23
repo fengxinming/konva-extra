@@ -1,0 +1,9 @@
+*.sh
+node_modules
+logs
+dist
+coverage
+LICENSE
+README.md
+pnpm-lock.yaml
+.npmrc
