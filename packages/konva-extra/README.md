@@ -9,7 +9,7 @@
 
 ## Live Demo
 
-[Draw Polygon](https://fengxinming.github.io/konva-extra/modules/konva-extra/last-section-dash-line#draw-polygon)
+- [Draw Polygon](https://fengxinming.github.io/konva-extra/modules/konva-extra/last-section-dash-line#draw-polygon)
 
 ## Documentation
 

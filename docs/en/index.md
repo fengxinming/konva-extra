@@ -3,27 +3,15 @@
 layout: home
 
 hero:
-  name: util
-  text: A lightweight, modular collection of utility libraries
-  tagline: Providing practical functions for common development scenarios, with TypeScript support.
-  # actions:
-  #   - theme: brand
-  #     text: Guide
-  #     link: /guide
-    # - theme: alt
-    #   text: API Examples
-    #   link: /api/entry
+  name: konva-extra
+  text: An extension library based on Konva
+  tagline: Provides enhanced graphical components and utilities to simplify development of complex interactive visualizations.
   image:
     src: https://vitepress.dev/vitepress-logo-large.svg
     alt: util
 
-features:
-  - title: TypeScript Support
-    details: Full type definition files included
-  - title: Browser Compatibility
-    details: Supports ES5+ environments (via UMD builds)
-  - title: Tree-shaking Ready
-    details: Import individual functions via ES Modules for on-demand usage
 ---
 
 ## **Module List**
+
+- [konva-extra](/modules/konva-extra) - An extension library based on [Konva](https://konvajs.org/) that provides enhanced graphical components and utilities to simplify development of complex interactive visualizations.

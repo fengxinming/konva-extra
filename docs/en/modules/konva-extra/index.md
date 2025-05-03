@@ -14,13 +14,13 @@
 ::: code-group
 
 ```bash [npm]
-npm add konva-extra
+npm add konva konva-extra
 ```
 ```bash [pnpm]
-pnpm add konva-extra
+pnpm add konva konva-extra
 ```
 ```bash [yarn]
-yarn add konva-extra
+yarn add konva konva-extra
 ```
 ```html [HTML]
 <script src="https://cdn.jsdelivr.net/npm/konva/konva.min.js"></script>
