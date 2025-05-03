@@ -1,25 +1,25 @@
-# konva-extra
+# **util**
 
-[![npm package](https://nodei.co/npm/konva-extra.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/konva-extra)
+> A lightweight, modular collection of utility libraries providing practical functions for common development scenarios, with TypeScript support.
 
-> Some extra shapes for Konva framework
+---
 
-[![NPM version](https://img.shields.io/npm/v/konva-extra.svg?style=flat)](https://npmjs.org/package/konva-extra)
-[![NPM Downloads](https://img.shields.io/npm/dm/konva-extra.svg?style=flat)](https://npmjs.org/package/konva-extra)
-[![](https://data.jsdelivr.com/v1/package/npm/konva-extra/badge)](https://www.jsdelivr.com/package/npm/konva-extra)
+## **Features**
+- **TypeScript Support**: Full type definition files included
+- **Browser Compatibility**: Supports ES5+ environments (via UMD builds)
+- **Tree-shaking Ready**: Import individual functions via ES Modules for on-demand usage
 
-## Installation
+---
 
-```bash
-npm i konva-extra --save
-```
+## Contributing
 
-## API
+We welcome contributions from the community! If you find a bug or want to suggest an improvement, feel free to open an issue or submit a pull request.
 
-### LastSectionDashLine
+### How to Contribute
+1. Fork the repository.
+2. Create a new branch for your changes.
+3. Submit a pull request with a clear description of your changes.
 
-继承 [Konva.Line](https://konvajs.org/api/Konva.Line.html)，并扩展了属性`lastDashEnabled`和方法`lastDashEnabled`，用于控制最后一段是否是虚线
+## License
 
-Since
-* 1.0.0
-
+This project is licensed under the [MIT License](LICENSE).

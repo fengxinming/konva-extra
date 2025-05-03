@@ -1,9 +1,10 @@
-*.sh
-node_modules
-logs
+.DS_Store
+.idea
+.vscode
+
 dist
+logs
 coverage
-LICENSE
-README.md
-pnpm-lock.yaml
-.npmrc
+node_modules
+
+!docs/.vitepress/

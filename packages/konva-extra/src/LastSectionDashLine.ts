@@ -1,43 +1,56 @@
-import { Line } from 'konva';
+import Konva from 'konva';
+import type { LineConfig } from 'konva/lib/shapes/Line';
 
-export default class LastSectionDashLine extends Line {
-  constructor(config) {
+export interface LastSectionDashLineConfig extends LineConfig {
+  lastDashEnabled?: boolean;
+  dash: number[];
+}
+
+export class LastSectionDashLine extends Konva.Line {
+  className = 'LastSectionDashLine';
+  constructor(config: LastSectionDashLineConfig) {
     super(config);
-    let { lastDashEnabled } = config;
-    if (lastDashEnabled == null) {
-      lastDashEnabled = true;
-      this.dashEnabled(false);
-    }
-    this.lastDashEnabled(lastDashEnabled);
+
+    const { lastDashEnabled } = config;
+    this.dashEnabled(false);
+    this.lastDashEnabled = !!lastDashEnabled;
+  }
+
+  get lastDashEnabled(): boolean {
+    return this.attrs.lastDashEnabled;
+  }
+
+  set lastDashEnabled(bool: boolean) {
+    this.attrs.lastDashEnabled = bool;
   }
 
   /**
    * 内部渲染方法
    *
-   * @param {konva.Context} context
+   * @param {Konva.Context} context
    */
-  _sceneFunc(context) {
-    const points = this.points();
-    const length = points.length;
+  _sceneFunc(context: Konva.Context) {
+    const points = this.points(); // 坐标点
+    const length = points.length; // 坐标点数量
 
     if (!length) {
       return;
     }
 
-    const tension = this.tension();
-    const closed = this.closed();
-    const bezier = this.bezier();
-    const dash = this.dash();
-    let tp;
-    let len;
-    let n;
-    let ex;
-    let ey;
+    const tension: number = this.tension(); // 张力，值越大，曲线越弯曲。
+    const closed: boolean = this.closed(); // 是否闭合
+    const bezier: boolean = this.bezier(); // 是否贝塞尔曲线
+    const dash: number[] = this.dash(); // 虚线
+    let tp: number[]; // 张力坐标
+    let len: number; // 线段长度
+    let n: number; // 索引
+    let ex: number; // 终点x
+    let ey: number; // 终点y
 
     context.beginPath();
     context.moveTo(points[0], points[1]);
 
-    // tension
+    // 曲线
     if (tension !== 0 && length > 4) {
       tp = this.getTensionPoints();
       len = tp.length;
@@ -83,7 +96,7 @@ export default class LastSectionDashLine extends Line {
       }
     }
     else {
-      // no tension
+      // 直线
       len = length - 2;
       for (n = 2; n < len; n += 2) {
         context.lineTo(points[n], points[n + 1]);
@@ -93,7 +106,7 @@ export default class LastSectionDashLine extends Line {
         ex = points[len];
         ey = points[len + 1];
 
-        if (this.lastDashEnabled() && dash && dash.length) {
+        if (this.lastDashEnabled && dash && dash.length) {
           context.strokeShape(this);
           context.save();
           context.beginPath();
@@ -121,12 +134,3 @@ export default class LastSectionDashLine extends Line {
     }
   }
 }
-
-LastSectionDashLine.prototype.className = 'LastSectionDashLine';
-LastSectionDashLine.prototype.lastDashEnabled = function (bool) {
-  if (bool == null) {
-    return this.getAttr('lastDashEnabled');
-  }
-  this.setAttr('lastDashEnabled', !!bool);
-  return this;
-};
