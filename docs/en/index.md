@@ -8,10 +8,10 @@ hero:
   tagline: Provides enhanced graphical components and utilities to simplify development of complex interactive visualizations.
   image:
     src: https://vitepress.dev/vitepress-logo-large.svg
-    alt: util
+    alt: konva-extra
 
 ---
 
 ## **Module List**
 
-- [konva-extra](/modules/konva-extra) - An extension library based on [Konva](https://konvajs.org/) that provides enhanced graphical components and utilities to simplify development of complex interactive visualizations.
+- [konva-extra](/modules/konva-extra/) - An extension library based on [Konva](https://konvajs.org/) that provides enhanced graphical components and utilities to simplify development of complex interactive visualizations.
