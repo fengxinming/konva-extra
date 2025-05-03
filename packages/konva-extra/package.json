@@ -1,0 +1,47 @@
+{
+  "name": "konva-extra",
+  "version": "2.0.0",
+  "description": "Some extra shapes for Konva framework.",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
+  "main": "dist/index.js",
+  "unpkg": "dist/index.umd.js",
+  "jsdelivr": "dist/index.umd.js",
+  "scripts": {
+    "build": "vite build",
+    "watch": "vite build --watch",
+    "prepublishOnly": "npm run build",
+    "release": "pnpm publish --no-git-checks",
+    "test": "vitest run --coverage"
+  },
+  "keywords": [
+    "konva",
+    "extra"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengxinming/konva-extra.git",
+    "directory": "packages/konva-extra"
+  },
+  "author": "Jesse Feng <fxm0016@126.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fengxinming/konva-extra/issues"
+  },
+  "homepage": "https://github.com/fengxinming/konva-extra#readme",
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "@vitest/coverage-v8": "^3.1.1",
+    "camel-kit": "^1.0.0",
+    "vite": "^6.2.6",
+    "vite-plugin-build-chunk": "^6.0.0",
+    "vite-plugin-combine": "^6.2.1",
+    "vite-plugin-external": "^6.2.1",
+    "vitest": "^3.1.1"
+  },
+  "peerDependencies": {
+    "konva": "^9.3.20"
+  }
+}
