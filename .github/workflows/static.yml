@@ -40,8 +40,9 @@ jobs:
         uses: pnpm/action-setup@v4
         with:
           version: 10
-      - run: npm run deps
-      - run: npm run docs:build   # 执行构建命令（生成 dist/ 目录）
+      - run: npm run deps            # 构建 starter 依赖
+      - run: npm run build:all       # 发布所有包
+      - run: npm run docs:build      # 执行构建命令（生成 dist/ 目录）
         env:
           BASE_URL: ${{ env.base_url }}
       - name: 配置 Pages
