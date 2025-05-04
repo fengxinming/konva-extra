@@ -1,7 +1,7 @@
 {
   "name": "konva-extra",
   "version": "2.0.0",
-  "description": "Some extra shapes for Konva framework.",
+  "description": "An extension library based on Konva that provides enhanced graphical components and utilities to simplify development of complex interactive visualizations.",
   "types": "dist/index.d.ts",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
