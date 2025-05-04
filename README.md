@@ -1,13 +1,14 @@
-# **util**
+# konva-extra 🎨
 
-> A lightweight, modular collection of utility libraries providing practical functions for common development scenarios, with TypeScript support.
+> **konva-extra** is an extension library based on [Konva](https://konvajs.org/) that provides enhanced graphical components and utilities to simplify development of complex interactive visualizations.
 
 ---
 
-## **Features**
-- **TypeScript Support**: Full type definition files included
-- **Browser Compatibility**: Supports ES5+ environments (via UMD builds)
-- **Tree-shaking Ready**: Import individual functions via ES Modules for on-demand usage
+## Documentation
+
+For detailed usage instructions and API references, please visit the official documentation:
+
+👉 [View Full Documentation](https://fengxinming.github.io/konva-extra/)
 
 ---
 
